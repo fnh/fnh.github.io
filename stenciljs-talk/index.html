@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+      <script src="unkonf-greeter-dist/unkonf.js"></script>
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<section>
+					<h2>Building Web Components with</h2>
+					<img src="./stencil.svg" class="plain">
+				</section>
+				
+				<section>
+					<h2>Components?</h2>
+					<blockquote>
+							"One thing can be stated with certainty:<br/> Components are for composition.<br/></span> 
+							[..] Beyond that trivial observation, much is unclear."</span><br/>
+							(Clemens Szypersky)
+					</blockquote>
+				</section>
+
+				<section>
+					<h2>Web Components</h2>
+					<section>
+						<p>A set of well-supported specs:</p>
+						<ul>
+							<li>Custom Elements</li>
+							<li>HTML Templates</li>
+							<li>Shadow DOM</li>
+							<li>HTML Imports</li>
+						</ul>
+				    </section>
+					<section>
+						<img src="webcomponents-support.png" class="plain">
+					</section>
+					<section>
+						<p>So, why don't we just use the platform?</p>
+						<p>
+							<ul>
+								<li>Quite some boiler plate code necessary</li>
+								<li>Developer experience could be a lot smoother</li>
+								<li>Not straight forward to build</li>
+							</ul>
+					    </p>
+					</section>
+				</section>
+			
+				<section>
+					<h2>Stencil JS</h2>
+					<section>
+						<ul>
+							<li>Build time tool for developing 100% standard-compliant plain JavaScript web components</li>
+							<li>Borrows ideas from popular frameworks without itself being yet another one</li>
+							<li>Utilizes: TypeScript, JSX / TSX, SCSS
+							</li>
+							<li>Quick to learn</li>
+						</ul>
+					</section>
+					<section>
+							<h3>API</h2>
+					
+							<ul>
+								<span  class="fragment">
+									<li>@Component()</li>
+								</span>
+								<span  class="fragment">
+									<li>@Prop()</li>
+									<li>@State()</li>
+								</span>
+								<span  class="fragment">
+									<li>@Method()</li>
+									<li>@Listen()</li>
+								</span>
+								<span  class="fragment"><li>@Event()</li></span>
+							
+								<span  class="fragment">
+									<li>@Element()</li>
+							    </span>
+							</ul>						
+						</section>
+				</section>
+		
+
+				<section>
+					<h1>DEMO TIME!</h1>
+					<section></section>
+					<section>
+						<pre><code data-trim data-noescape>
+								import { Component, Prop } from '@stencil/core';
+								
+								@Component({
+								  tag: 'unkonf-greeter'
+								})
+								export class UnkonfGreeter {
+								  @Prop() first: string;
+								  @Prop() last: string;
+								  
+								  render() {
+									return (&lt;div&gt;Hello, {this.first} {this.last}&lt;/div&gt;);
+								  }
+								}
+						</code></pre>
+							
+					</section>
+					<section>
+						<pre><code data-trim data-noescape>
+								&lt;unkonf-greeter first="Stencil" last="JS"&gt;&lt;/unkonf-greeter&gt;
+							</code></pre>
+	
+						<unkonf-greeter first="Stencil" last="JS"></unkonf-greeter>
+					</section>
+				</section>
+
+				<section>
+					THANK YOU
+					
+				</section>
+
+				<section data-markdown>
+						<textarea data-template>
+							## Resources
+
+							* [StencilJS.com](https://stenciljs.com)
+							* Github:
+							  [Stencil](https://github.com/ionic-team/stencil), [Component Starter](https://github.com/ionic-team/stencil-component-starter), [App Starter](https://github.com/ionic-team/stencil-app-starter)
+							* [Using Web Components in Ionic](https://www.youtube.com/watch?v=UfD-k7aHkQE)
+							* Tutorial Video Series (45min total): [Part 1](https://www.youtube.com/watch?v=MqMYaT1GlWY), [Part 2](https://www.youtube.com/watch?v=g4jsOCUD4lA), [Part 3](https://www.youtube.com/watch?v=Yp_oiCWV_no)
+
+					
+						</textarea>
+				</section>
+				
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

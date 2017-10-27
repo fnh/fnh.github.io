@@ -1,0 +1,27 @@
+{
+  "namespace": "unkonf",
+  "components": [
+    [
+      "unkonf-greeter",
+      "unkonf-greeter",
+      0,
+      [
+        [
+          "first",
+          1,
+          1,
+          2
+        ],
+        [
+          "last",
+          1,
+          1,
+          2
+        ]
+      ]
+    ]
+  ],
+  "loader": "../unkonf.js",
+  "core": "unkonf.core.js",
+  "corePolyfilled": "unkonf.core.pf.js"
+}
