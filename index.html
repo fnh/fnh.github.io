@@ -16,23 +16,10 @@
             margin: 1rem 0 1rem 0;
             background-color: lightgrey;
         }
-
-        /*article:not(:target) * {
-            display: none;
-        }
-
-        article:not(:target) h1 {
-            display: block;
-        }
-
-        article:not(:target) h1 * {
-            display: block;
-        }
-
-        article h1 a {
+        
+        a {
             text-decoration: none;
-            color: #555;
-        }*/
+        }
 
         main article {
             background-color: #fdfdfd;
@@ -67,18 +54,87 @@
             padding-left: .25rem;
             margin-left: 0.75rem;
         }
+
+        .hidden-unless-targeted:not(:target) {
+            display: none;
+        }
+
+        .hidden-unless-targeted:target {
+            display: block;
+        }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset='utf-8'>
+    <meta name="description" content="Notes, memos and marginalia on personal interests">
+    <meta name="author" content="Fabian Holzer" />
+
 </head>
 
 <body>
 
 <header>
     <h1>Notes, memos, marginalia...</h1>
+
 </header>
 
 <main>
+
+<article id="is-it-worth-my-time">
+<h1><a href="#is-it-worth-my-time">Is it worth my time?</a></h1>
+
+<p>
+About twenty-five centuries ago Hippocrates of Kos famously stated that 
+<a href="https://en.wikipedia.org/wiki/Ars_longa,_vita_brevis">life is short,
+while art is long</a>. Most knowledge workers can very much relate to that. 
+While the body of knowledge in a field is evergrowing, 
+the time available to an individual for deliberate learning activities is limited severely.
+</p>
+
+<p>
+I use the following criteria to assess if a topic is worth spending my time on it.
+</p>
+
+<h2>Longevity and Transferability</h2>
+<p>
+I prefer evergreen knowledge and focus on topics that are not bound to a specific technology. 
+As a general principle, anything with a version number attached to it should be treated with caution.
+But: Using a specific technology (even if it's non-mainstream or dated) to illustrate a concept is fine. 
+</p>
+
+<h2>Applicability and personal usefulness</h2>
+<p>
+Many concepts are long-lived and transfer well, but when the 
+chance of applying them is rather slim, then other things should take priority.
+Not applying something is detrimental to retention and time is too valuable 
+to spend it on learning something that falls into oblivion. 
+</p>
+<p>
+As a caveat: To some degree, it cannot be known which topics will lend themselves 
+to be applied to problems presented to you due to external needs and interests. 
+Chance favorus the prepared mind.
+</p>
+
+<h2>Immediate necessity or personal commitment</h2>
+<p>
+Not everything which needs to be learned will be a beautiful timeless idea.
+Sometimes I need to grasp a poorly documented functionality of some obscure 
+technology to get a task done. It comes down to a judgement call, which is a matter of 
+experience and confidence, how deep to go. It can be beneficial to build a real understanding 
+instead of just copy-pasting from the web (which might get the job done but comes at some 
+loss of control).
+</p>
+<p>
+There are also a few topics and technologies, to which I'm committed deeply. 
+They are clearly defined and I regularly reassess my commitment. 
+I consider it worthwhile to keep up with them, even if the criteria laid out 
+before are unmet to some extend. 
+</p>
+
+</article>
+
+<article id="instead-of-a-comment-function" class="hidden-unless-targeted">
+Standing invitation
+</article>
 
 
 <article id="on-the-risks-of-quick-fixes" data-first-published="2021-04-07">
@@ -278,7 +334,7 @@ weird dude who writes raw HTML</a>.
 <hr>
 
 <footer>
-&copy; Fabian Holzer, 2021 -
+Fabian Holzer, 2021 -
 </footer>
 
 
