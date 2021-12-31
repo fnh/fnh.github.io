@@ -67,8 +67,7 @@
     <meta charset='utf-8'>
     <meta name="description" content="A collection of notes on a variety of topics">
     <meta name="author" content="Fabian Holzer" />
-    <link rel="canonical" href="https://fabian-holzer.de/" />
-
+    <link rel="canonical" href="https://holzer.online/" />
 </head>
 
 <body>
@@ -79,7 +78,90 @@
 
 <main>
 
-<article id="add-expiration-dates-to-todo-comments">
+<article id="lazy-way-of-providing-a-feed" data-first-published="2021-12-22">
+<h1><a href="lazy-way-of-providing-a-feed">The lazy webmaster's way of providing a RSS feed </a></h1>
+<p>
+I consciously setup my website as minimal as possible. It's liberating to have a the content immediately in a representation that renders <a href="#benefits-of-a-classless-approach-to-css">good enough</a>. Yet I'd like to offer is a RSS feed. I could of course write it manually, but that would become a chore rather soon. A small tool chain could also work, but I would lose the feeling of immediacy.
+</p> 
+<p>
+Having a regular markup structure made it possible to an external service derive the feed automatically. So, <a href="https://createfeed.fivefilters.org/extract.php?url=https%3A%2F%2Fholzer.online&item=article&item_title=h1&item_desc=p&item_date=article+%40data-first-published&item_date_format=Y-m-d&max=10&order=document&guid=url&strip=&keep_qs_params=">here you go</a>. 
+</p>
+</article>	
+
+<article id="avoid-collecting-without-acting" data-first-published="2021-12-21">
+<h1><a href="#avoid-collecting-without-acting">Avoid collecting without acting</a></h1>
+<p>
+The amount of information which is thrust upon you is orders of magnitude larger than the capacity to absorb and make use of it. This can lead to a destructive habit, called the <a href="https://zettelkasten.de/posts/collectors-fallacy/">collector's fallacy</a>. This fallacy is a form of self-deception. It makes you feel like you are progressing where you are actually stalling. It leads to wasting your precious time on <a href="#is-it-worth-my-time">something that's not worth it</a>.  
+</p>
+<p>
+To avoid falling prey to the collector's fallacy, you need to work actively with the collection you have. Introduce some form of rate limiting: Don't buy a new book before you finished one. Don't bookmark another article before you haven't read (or at least deleted) one of those you have bookmarked. 
+</p>
+<p>
+If it would have been important, you would have already read it. Its content likely won't be lost. There are search engines and even in case the of <a href="https://www.w3.org/Provider/Style/URI">uncool urls</a> there's still the <a href="https://archive.org/web/">wayback machine</a>.
+</p>
+</article>
+
+<article id="on-digital-gardening" data-first-published="2021-12-17">
+<h1><a href="#on-digital-gardening">On digital gardening</a></h1>
+<p>
+On content-focused websites the prevalent pattern for the organizing content is the blog format: a list of articles/posts presented in reverse-chronologically order. Amy Hoy wrote <a href="https://stackingthebricks.com/how-blogs-broke-the-web/">a criticism of this organizational pattern</a>, which found some resonance. So nowadays - as everything old is new again - a bunch of personal websites started to conscientiously style and organize themselves as <a href="https://joelhooks.com/digital-garden">digital gardens</a>.
+</p>
+<p>
+Now, there is no copyright to that term, but one overarching concept I see and very much like is, that articles are not seen as something that is written once and then finished after the publication, but as a seed which might grow into something that eventually becomes evergreen, more akin to a well-organized public (read-only) wiki.  
+</p>
+<p>
+I haven't yet figured out how I will this page in the long run, currently it is much more a blog than a garden, yet I find the idea to go back to existing article and enhance them over time very intriguing. 
+</p>
+</article>
+
+<article id="constraints-force-creativity" data-first-published="2021-12-15">
+<h1><a href="#constraints-force-creativity">Constraints force creativity</a></h1>
+<p>
+It is often suprising to see how much is possible even if there are heavy constraints on resources or time. 
+It makes me realize that the majority of things are non-essential. 
+</p>
+</article>
+
+<article id="satisficing" data-first-published="2021-12-14">
+<h1>
+<a href="#on-satisficing">On Satisficing</a>
+</h1>
+<p>
+Every day we need to decide many things and many of those decisions are of minor importance. Lots of trivial decisions to make can create neural fatigue and lead to unproductivity and loss of focus.
+</p>
+<p>
+Herbert Simon coined the word <i>satisficing</i> for a strategy that concentrates on getting an option that is good enough, but possibly not the very best. Satisficing is one of the foundations of productive human behaviour because it avoids wasting time on finding improvements that are not going to make a significant difference.
+</p> 
+<p>
+Yet, satisficing should not be applied to very high-priority endeavours where much is at stake. There pursuing excellence might  actually be the better strategy. But those are few and far between. To have the capacity to make them happen, satisficing is an imperative.
+</p>
+</article>
+
+<article id="benefits-of-a-classless-approach-to-css" data-first-published="2021-12-13">
+<h1>
+<a href="#benefits-of-a-classless-approach-to-css">The benefits of a classless approach to CSS</a>
+</h1>
+<p>
+I first experienced the web in the mid-nineties. At that time CSS wasn't really around and even if the first browsers supported it, many pages were just text-heavy unstyled documents. Today you would consider such an approach as luddite, yet since the H in HTML stands for hyper<i>text</i> you could argue that keeping styling concerns out of markup is the purest form of authoring a document for the web.
+</p>
+<p>
+Today's default choices are quite distinguishably different from that. A minified version of Bootstrap 4 ships 117kB.  As a comparison: I would have to write about 60 to 80 additional articles on this site to match that weight with an equal portion of content. And while at it, I'd have to clutter my markup with classes over classes. There are of course slimmer css frameworks than Bootstrap, but nonetheless, my main motivation is in the writing down useful things, therefore I decided to approach the styling of this site quite radically with classless CSS. All styling decisions are taken by CSS which is targeted by element selectors only. If I'd bother to minify it, that would clock in little over half a kilobyte, and even unminified it is less than 1% of bootstrap. 
+</p>
+<p>
+But page weight isn't the most important thing. A classless CSS approach enables me to author content without intermediate representations (e.g. the Markdown flavour du jour in combination with a static site generator) directly in HTML while still allowing me to focus on the content.
+</p>
+</article>
+
+<article id="an-attempt-to-gain-momentum" data-first-published="2021-12-12">
+<h1><a href="#an-attempt-to-gain-momentum">An attempt to gain momentum</a></h1>
+<p>
+When I started putting content on the web again, I hoped to order some of my scattered scattered notes into something coherent and having fun while doing so. The result are even more scattered, unpolished, unfinished notes. Plus ça change, plus c'est la même chose...</p>
+<p>
+For the next thirty days (starting on monday (2021-12-13)), I'll do an experiment and commit myself to update this site everyday with a new piece of content.
+</p>
+</article>
+	
+<article id="add-expiration-dates-to-todo-comments" data-first-published="2021-05-19">
 <h1><a href="#add-expiration-dates-to-todo-comments">Add expiration dates to TODO comments</a></h1>
 
 <p>
@@ -97,7 +179,7 @@ have put energy into the refactoring already.
 </p>
 </article>
 
-<article id="is-it-worth-my-time">
+<article id="is-it-worth-my-time" data-first-published="2021-05-18">
 <h1><a href="#is-it-worth-my-time">Is it worth my time?</a></h1>
 
 <p>
@@ -191,7 +273,7 @@ long after quick has been forgotten.
 </blockquote>
  </article>
 
-<article id="2021-03-14">
+<article id="2021-03-14" data-first-published="2021-03-14">
 <h1><a href="#2021-03-14">The Second-System Effect - Excerpts</a></h1>
 
 <p>
@@ -257,7 +339,7 @@ and sinking time in obsolete areas and functions.
 </p>
 </article>
 
-<article id="2021-02-03">
+<article id="2021-02-03" data-first-published="2021-02-03">
 <h1><a href="#2021-02-03">Two classes of disagreement</a></h1>
 <p>
 I learned about the concept of two classes of disagreement from an anecdote
@@ -284,10 +366,9 @@ With that framework in mind, when you "agree to disagree", it would be
 wise to ensure that it is on a Class Two disagreement.
 </p>
 
-<small>2021-02-03</small>
 </article>
 
-<article id="2021-01-25">
+<article id="2021-01-25" data-first-published=""="2021-01-25">
 <h1><a href="#2021-01-25">Can you ever know enough about people?</a></h1>
 
 <p>
@@ -311,10 +392,9 @@ out of simply reading once through the table of contents.
 
 <p>All in all: a recommended reading.</p>
 
-<small>2021-01-25</small>
 </article>
 
-<article id="2021-01-20">
+<article id="2021-01-20" data-first-published="2021-01-20">
 <h1><a href="#2021-01-20">It's been a while...</a></h1>
 
 <p>
@@ -338,8 +418,6 @@ weird dude who writes raw HTML</a>.
 </p>
 
 <p>Just for the fun of it. <i>:)</i></p>
-
-<small>2021-01-20</small>
 </article>
 
 </main>
@@ -347,9 +425,8 @@ weird dude who writes raw HTML</a>.
 <hr>
 
 <footer>
-Fabian Holzer, MMXXI -
+Fabian Holzer
 </footer>
-
 
 
 </body>
